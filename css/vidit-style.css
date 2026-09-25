@@ -1,0 +1,1246 @@
+/* ==========================================================================
+   Vidit Signature - 25-Acre Futuristic Luxury Township in Jabalpur
+   Theme: Luxury Mindful Living | Deep Emerald, Royal Navy & Champagne Gold
+   ========================================================================== */
+
+:root {
+  --emerald-dark: #081711;
+  --emerald-deep: #0D221A;
+  --emerald: #143528;
+  --emerald-surface: #1B4534;
+  --emerald-light: #2A634D;
+  --emerald-subtle: rgba(20, 53, 40, 0.08);
+
+  --gold: #DFB76C;
+  --gold-light: #F4E8C1;
+  --gold-dark: #A9801A;
+  --gold-gradient: linear-gradient(135deg, #FBF0B9 0%, #DFB76C 40%, #C59B27 75%, #9A7311 100%);
+  --gold-subtle: rgba(223, 183, 108, 0.12);
+
+  --navy: #071520;
+  --navy-surface: #0E2233;
+
+  --paper: #FAF8F5;
+  --paper-card: #FFFFFF;
+  --paper-warm: #F4F1EA;
+  --stone-100: #F3F1EC;
+  --stone-200: #E6E2D8;
+
+  --ink: #111827;
+  --ink-muted: #4B5563;
+  --ink-light: #9CA3AF;
+  --white: #FFFFFF;
+
+  --whatsapp: #25D366;
+  --whatsapp-hover: #1EBE5D;
+  --justdial: #FF6600;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 6px 18px rgba(8, 23, 17, 0.08);
+  --shadow-lg: 0 14px 30px rgba(8, 23, 17, 0.12);
+  --shadow-xl: 0 24px 48px rgba(8, 23, 17, 0.18);
+  --shadow-gold: 0 8px 25px rgba(223, 183, 108, 0.25);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--paper);
+  color: var(--ink);
+  line-height: 1.65;
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+::selection {
+  background-color: var(--gold);
+  color: var(--emerald-dark);
+}
+
+/* ==========================================================================
+   Top Announcement & Contact Bar
+   ========================================================================== */
+.top-contact-bar {
+  background: linear-gradient(90deg, #06140E 0%, #0D221A 50%, #153225 100%);
+  color: var(--paper);
+  font-size: 0.8rem;
+  padding: 8px 4%;
+  border-bottom: 1px solid rgba(223, 183, 108, 0.28);
+  position: relative;
+  z-index: 1001;
+  transition: var(--transition);
+}
+
+.top-contact-bar .container-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.top-contact-bar a {
+  color: var(--paper);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.top-contact-bar a:hover {
+  color: var(--gold-light);
+}
+
+.badge-rera {
+  background: rgba(223, 183, 108, 0.15);
+  color: var(--gold-light);
+  border: 1px solid rgba(223, 183, 108, 0.35);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.badge-rating {
+  background: rgba(255, 102, 0, 0.15);
+  color: #FFA726;
+  border: 1px solid rgba(255, 102, 0, 0.4);
+  padding: 2px 9px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ==========================================================================
+   Site Header & Sticky Navigation
+   ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(13, 34, 26, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(223, 183, 108, 0.18);
+  transition: all 0.3s ease;
+  padding: 10px 4%;
+}
+
+.site-header.scrolled {
+  background-color: rgba(8, 23, 17, 0.98);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(223, 183, 108, 0.35);
+  padding: 8px 4%;
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.site-logo .logo-img {
+  height: 48px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.site-logo:hover .logo-img {
+  transform: scale(1.02);
+}
+
+.main-nav {
+  display: none;
+  align-items: center;
+  gap: 28px;
+}
+
+@media (min-width: 1024px) {
+  .main-nav {
+    display: flex;
+  }
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 6px 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--gold);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold-gradient);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-header-call {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(223, 183, 108, 0.4);
+  color: var(--gold-light);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+@media (min-width: 768px) {
+  .btn-header-call {
+    display: inline-flex;
+  }
+}
+
+.btn-header-call:hover {
+  background: rgba(223, 183, 108, 0.18);
+  border-color: var(--gold);
+  color: #FFFFFF;
+}
+
+.btn-header-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--whatsapp);
+  color: #FFFFFF;
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+  transition: var(--transition);
+}
+
+.btn-header-wa:hover {
+  background: var(--whatsapp-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+}
+
+.mobile-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+@media (min-width: 1024px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+.mobile-menu-btn:hover {
+  background: rgba(223, 183, 108, 0.15);
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* ==========================================================================
+   Mobile Drawer & Backdrop
+   ========================================================================== */
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 12, 9, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 1998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.drawer-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 310px;
+  max-width: 85vw;
+  height: 100vh;
+  background: #0B1F17;
+  border-left: 1px solid rgba(223, 183, 108, 0.25);
+  z-index: 1999;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.mobile-drawer.open {
+  right: 0;
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drawer-close {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  transition: color 0.2s;
+}
+
+.drawer-close:hover {
+  color: var(--gold);
+}
+
+.drawer-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+  gap: 8px;
+}
+
+.drawer-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drawer-link:hover, .drawer-link.active {
+  background: rgba(223, 183, 108, 0.15);
+  color: var(--gold-light);
+  border-left: 3px solid var(--gold);
+}
+
+.drawer-footer {
+  margin-top: auto;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(4, 12, 9, 0.4);
+}
+
+/* ==========================================================================
+   Hero Section & Visual Architecture
+   ========================================================================== */
+.hero-wrapper {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background-color: #081711;
+  background-image: 
+    radial-gradient(ellipse at 80% 20%, rgba(20, 53, 40, 0.85) 0%, rgba(8, 23, 17, 0.98) 70%),
+    linear-gradient(180deg, rgba(8, 23, 17, 0.4) 0%, rgba(8, 23, 17, 0.95) 100%),
+    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  padding: 70px 4% 60px 4%;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(8, 23, 17, 0.94) 0%, rgba(13, 34, 26, 0.88) 50%, rgba(4, 12, 9, 0.96) 100%);
+  pointer-events: none;
+}
+
+.hero-grid-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(223, 183, 108, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(223, 183, 108, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.badge-trust {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(223, 183, 108, 0.12);
+  border: 1px solid rgba(223, 183, 108, 0.35);
+  color: var(--gold-light);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.badge-trust .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 10px var(--gold);
+  animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(0.9); opacity: 0.8; }
+}
+
+.hero-title {
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  color: #FFFFFF;
+}
+
+.hero-title .highlight {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 720px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* Quick Search Card in Hero */
+.search-card-container {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(223, 183, 108, 0.4);
+  color: var(--ink);
+  margin-top: 36px;
+  position: relative;
+  z-index: 12;
+}
+
+.search-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .search-form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .search-form-grid {
+    grid-template-columns: 1.2fr 1.2fr 1.2fr 1fr;
+  }
+}
+
+.form-select, .form-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--stone-200);
+  background-color: #FAF8F5;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  transition: var(--transition);
+  outline: none;
+}
+
+.form-select:focus, .form-input:focus {
+  border-color: var(--gold-dark);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(223, 183, 108, 0.2);
+}
+
+.btn-search-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--gold-gradient);
+  color: var(--emerald-dark);
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  font-size: 0.92rem;
+  box-shadow: var(--shadow-gold);
+  transition: var(--transition);
+}
+
+.btn-search-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(223, 183, 108, 0.4);
+}
+
+/* ==========================================================================
+   Spiritual & Mindful Living Spotlight (Chintamani Hanuman Mandir & Goshala)
+   ========================================================================== */
+.sanctuary-section {
+  background: linear-gradient(180deg, #081711 0%, #0E271E 50%, #081711 100%);
+  color: #FFFFFF;
+  padding: 85px 4%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sanctuary-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.sanctuary-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(223, 183, 108, 0.22);
+  border-radius: var(--radius-lg);
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.sanctuary-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.3), 0 0 20px rgba(223, 183, 108, 0.15);
+}
+
+.sanctuary-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--gold-gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sanctuary-card:hover::after {
+  opacity: 1;
+}
+
+.icon-temple-box {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: rgba(223, 183, 108, 0.15);
+  border: 1px solid rgba(223, 183, 108, 0.35);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   Interactive Master Plan & Township Explorer
+   ========================================================================== */
+.masterplan-container {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--stone-200);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.masterplan-viewport {
+  position: relative;
+  background: #0C1E16;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.masterplan-svg {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.plan-hotspot {
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.plan-hotspot:hover {
+  filter: brightness(1.25) drop-shadow(0 0 8px rgba(223, 183, 108, 0.8));
+}
+
+.plan-legend-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #F4F1EA;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.plan-legend-chip:hover, .plan-legend-chip.active {
+  background: #0D221A;
+  color: var(--gold-light);
+  border-color: var(--gold);
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* ==========================================================================
+   Property / Plot Cards & Grid
+   ========================================================================== */
+.plot-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--stone-200);
+  overflow: hidden;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.plot-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-lg);
+}
+
+.plot-img-container {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background-color: #E6E2D8;
+}
+
+.plot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.plot-card:hover .plot-img {
+  transform: scale(1.06);
+}
+
+.plot-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(8, 23, 17, 0.85);
+  backdrop-filter: blur(6px);
+  color: var(--gold-light);
+  border: 1px solid rgba(223, 183, 108, 0.4);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.plot-rera-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(37, 211, 102, 0.9);
+  color: #FFFFFF;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.plot-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.plot-price {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--emerald);
+  font-family: var(--font-display);
+}
+
+.plot-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 12px 0;
+  margin: 12px 0;
+  border-top: 1px solid var(--stone-100);
+  border-bottom: 1px solid var(--stone-100);
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec-val {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* ==========================================================================
+   EMI Loan Calculator
+   ========================================================================== */
+.calc-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--stone-200);
+  padding: 32px;
+  box-shadow: var(--shadow-lg);
+}
+
+.calc-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 4px;
+  background: #E6E2D8;
+  outline: none;
+  margin: 14px 0 6px 0;
+}
+
+.calc-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.calc-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.calc-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+
+.calc-result-box {
+  background: linear-gradient(135deg, #091B13 0%, #112F23 100%);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  color: #FFFFFF;
+  border: 1px solid rgba(223, 183, 108, 0.3);
+}
+
+/* ==========================================================================
+   Customer Testimonials & Social Proof
+   ========================================================================== */
+.testimonial-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--stone-200);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: var(--shadow-md);
+}
+
+.star-rating {
+  color: #FFA726;
+  display: flex;
+  gap: 3px;
+  margin-bottom: 14px;
+}
+
+/* ==========================================================================
+   Accordion / FAQ
+   ========================================================================== */
+.faq-item {
+  background: #FFFFFF;
+  border: 1px solid var(--stone-200);
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faq-item.active {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  user-select: none;
+  color: var(--ink);
+  transition: color 0.2s;
+}
+
+.faq-item.active .faq-question {
+  color: var(--emerald);
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+  color: var(--gold-dark);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 0 20px;
+  color: var(--ink-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.faq-item.active .faq-answer {
+  padding-bottom: 18px;
+}
+
+/* ==========================================================================
+   Modals & Popups
+   ========================================================================== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 12, 9, 0.8);
+  backdrop-filter: blur(6px);
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-box {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  max-width: 650px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid var(--stone-200);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  transform: translateY(20px) scale(0.96);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.modal-backdrop.open .modal-box {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.06);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  color: var(--ink);
+  z-index: 10;
+}
+
+.modal-close-btn:hover {
+  background: var(--gold);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   Toast Notifications
+   ========================================================================== */
+#toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  min-width: 280px;
+  max-width: 400px;
+  background: #0C1E16;
+  color: #FFFFFF;
+  border-left: 4px solid var(--gold);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: toastIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast.error {
+  border-left-color: #EF4444;
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   Floating Action Buttons (WhatsApp & Quick Call)
+   ========================================================================== */
+.floating-actions {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.float-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: var(--transition);
+  color: #FFFFFF;
+  position: relative;
+}
+
+.float-wa {
+  background: var(--whatsapp);
+}
+
+.float-wa:hover {
+  background: var(--whatsapp-hover);
+  transform: scale(1.08);
+}
+
+.float-wa::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid var(--whatsapp);
+  opacity: 0;
+  animation: pulseWa 2s infinite;
+}
+
+@keyframes pulseWa {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+.float-call {
+  background: var(--emerald-surface);
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+}
+
+.float-call:hover {
+  background: var(--emerald);
+  transform: scale(1.08);
+}
+
+/* ==========================================================================
+   Universal Scroll Animations & Reveals
+   ========================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-35px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(35px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-zoom {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.revealed {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+
+/* Shimmer Button Effect */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0.25) 50%,
+    rgba(255, 255, 255, 0) 80%
+  );
+  transform: rotate(30deg);
+  animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(30deg); }
+  30%, 100% { transform: translateX(100%) rotate(30deg); }
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background: #06140E;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 70px 4% 30px 4%;
+  border-top: 1px solid rgba(223, 183, 108, 0.25);
+  font-size: 0.9rem;
+}
+
+.footer-col-title {
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 36px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--gold-light);
+  transform: translateX(4px);
+}

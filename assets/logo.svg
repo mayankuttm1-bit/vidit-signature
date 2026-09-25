@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 110" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBF0B9"/>
+      <stop offset="30%" stop-color="#DFB76C"/>
+      <stop offset="70%" stop-color="#C59B27"/>
+      <stop offset="100%" stop-color="#9A7311"/>
+    </linearGradient>
+    <linearGradient id="crestGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1A3B2F"/>
+      <stop offset="100%" stop-color="#0A1813"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Crest Icon -->
+  <g transform="translate(10, 5)">
+    <!-- Octagon / Diamond Luxury Shield Outer -->
+    <polygon points="50,2 88,18 98,52 80,88 50,98 20,88 2,52 12,18" fill="url(#crestGrad)" stroke="url(#goldGrad)" stroke-width="2.5" />
+    <polygon points="50,8 82,21 91,51 75,82 50,90 25,82 9,51 18,21" fill="none" stroke="url(#goldGrad)" stroke-width="1" stroke-opacity="0.5" stroke-dasharray="2,2" />
+    
+    <!-- Stylized Architectural 'V' & Mountain Hill Pinnacle -->
+    <path d="M26,30 L50,78 L74,30 L63,30 L50,60 L37,30 Z" fill="url(#goldGrad)" filter="url(#glow)"/>
+    
+    <!-- Central Signature Spire / Lotus Temple Beacon -->
+    <polygon points="50,15 54,27 50,38 46,27" fill="url(#goldGrad)" />
+    <circle cx="50" cy="20" r="2.5" fill="#FFF" />
+    
+    <!-- Arch of Township Wings -->
+    <path d="M30,48 Q50,38 70,48" fill="none" stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M35,55 Q50,47 65,55" fill="none" stroke="url(#goldGrad)" stroke-width="1.2" stroke-linecap="round"/>
+    
+    <!-- Base Foundation Bar -->
+    <line x1="32" y1="84" x2="68" y2="84" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="50" cy="84" r="2" fill="#DFB76C" />
+  </g>
+
+  <!-- Typography -->
+  <g transform="translate(125, 20)">
+    <!-- VIDIT -->
+    <text x="0" y="38" font-family="'Playfair Display', 'Cinzel', Georgia, serif" font-size="34" font-weight="700" letter-spacing="4" fill="#FFFFFF">VIDIT</text>
+    <text x="138" y="38" font-family="'Playfair Display', 'Cinzel', Georgia, serif" font-size="34" font-weight="700" letter-spacing="4" fill="url(#goldGrad)">SIGNATURE</text>
+    
+    <!-- Tagline & Project Descriptor -->
+    <text x="2" y="60" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="9.5" font-weight="700" letter-spacing="3.2" fill="#DFB76C">A 25-ACRE FUTURISTIC LUXURY TOWNSHIP</text>
+    
+    <!-- Secondary City & Trust Subline -->
+    <line x1="2" y1="70" x2="400" y2="70" stroke="url(#goldGrad)" stroke-width="0.8" stroke-opacity="0.4" />
+    <text x="2" y="80" font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif" font-size="8" font-weight="600" letter-spacing="2.2" fill="#9CA3AF">PATAN BYPASS, JABALPUR • RERA REGISTERED • 4.9 ★ (2,000+ REVIEWS)</text>
+  </g>
+</svg>
