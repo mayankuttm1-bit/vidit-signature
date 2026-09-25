@@ -204,9 +204,25 @@ img {
 }
 
 .site-logo .logo-img {
-  height: 48px;
+  height: 40px;
   width: auto;
+  max-width: 220px;
+  object-fit: contain;
   transition: transform 0.3s ease;
+}
+
+@media (min-width: 480px) {
+  .site-logo .logo-img {
+    height: 44px;
+    max-width: 260px;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-logo .logo-img {
+    height: 48px;
+    max-width: none;
+  }
 }
 
 .site-logo:hover .logo-img {

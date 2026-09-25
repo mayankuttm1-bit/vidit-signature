@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 85" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 64" width="100%" height="100%">
   <defs>
     <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FBF0B9"/>
-      <stop offset="35%" stop-color="#DFB76C"/>
-      <stop offset="75%" stop-color="#C59B27"/>
+      <stop offset="0%" stop-color="#FFF2BA"/>
+      <stop offset="30%" stop-color="#E5BE6E"/>
+      <stop offset="70%" stop-color="#C59B27"/>
       <stop offset="100%" stop-color="#9A7311"/>
     </linearGradient>
     <linearGradient id="crestGrad" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#1A3B2F"/>
-      <stop offset="100%" stop-color="#0A1813"/>
+      <stop offset="100%" stop-color="#071510"/>
     </linearGradient>
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="1.5" result="blur" />
@@ -16,27 +16,26 @@
     </filter>
   </defs>
 
-  <!-- Crest Icon -->
-  <g transform="translate(6, 6)">
-    <!-- Octagon / Diamond Luxury Shield Outer -->
-    <polygon points="36,2 64,13 71,38 58,64 36,71 14,64 1,38 8,13" fill="url(#crestGrad)" stroke="url(#goldGrad)" stroke-width="2" />
-    <polygon points="36,6 59,15 65,37 54,60 36,65 18,60 7,37 13,15" fill="none" stroke="url(#goldGrad)" stroke-width="0.8" stroke-opacity="0.5" stroke-dasharray="2,2" />
+  <!-- Bold Crest Emblem -->
+  <g transform="translate(2, 2)">
+    <!-- Outer Shield / Diamond -->
+    <polygon points="30,1 55,10 60,32 50,53 30,59 10,53 0,32 5,10" fill="url(#crestGrad)" stroke="url(#goldGrad)" stroke-width="2.2" />
+    <polygon points="30,5 50,13 54,31 46,49 30,54 14,49 6,31 10,13" fill="none" stroke="url(#goldGrad)" stroke-width="0.8" stroke-opacity="0.4" stroke-dasharray="2,2" />
     
-    <!-- Stylized Architectural 'V' -->
-    <path d="M19,22 L36,56 L53,22 L45,22 L36,44 L27,22 Z" fill="url(#goldGrad)" filter="url(#glow)"/>
+    <!-- Bold 'V' Monogram -->
+    <path d="M15,18 L30,47 L45,18 L38,18 L30,36 L22,18 Z" fill="url(#goldGrad)" filter="url(#glow)"/>
     
-    <!-- Central Signature Spire Pinnacle -->
-    <polygon points="36,11 39,20 36,28 33,20" fill="url(#goldGrad)" />
-    <circle cx="36,15" r="1.8" fill="#FFF" />
+    <!-- Architectural Spire Pin -->
+    <polygon points="30,8 33,16 30,23 27,16" fill="url(#goldGrad)" />
+    <circle cx="30,12" r="1.8" fill="#FFFFFF" />
     
     <!-- Base Bar -->
-    <line x1="23" y1="61" x2="49" y2="61" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="18" y1="51" x2="42" y2="51" stroke="url(#goldGrad)" stroke-width="1.8" stroke-linecap="round"/>
   </g>
 
-  <!-- Clean Typography -->
-  <g transform="translate(94, 18)">
-    <text x="0" y="34" font-family="'Playfair Display', Georgia, serif" font-size="30" font-weight="700" letter-spacing="3" fill="#FFFFFF">VIDIT</text>
-    <text x="116" y="34" font-family="'Playfair Display', Georgia, serif" font-size="30" font-weight="700" letter-spacing="3" fill="url(#goldGrad)">SIGNATURE</text>
-    <text x="2" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="600" letter-spacing="5" fill="#DFB76C">JABALPUR</text>
+  <!-- High-Visibility Large Brand Typography (Zero Clutter, No Jabalpur) -->
+  <g transform="translate(74, 44)">
+    <text x="0" y="0" font-family="'Playfair Display', Georgia, serif" font-size="34" font-weight="800" letter-spacing="2.5" fill="#FFFFFF">VIDIT</text>
+    <text x="116" y="0" font-family="'Playfair Display', Georgia, serif" font-size="34" font-weight="800" letter-spacing="2.5" fill="url(#goldGrad)">SIGNATURE</text>
   </g>
 </svg>
